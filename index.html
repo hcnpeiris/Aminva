@@ -7,16 +7,22 @@
     <meta name="description" content="">
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Aminva</title>
+    <style>
+        .content-div {
+            display: none; 
+        }
+
+    </style>
 </head>
 
 
 <body class="bg-white">
-    <div class="splash-screen">
+    <!-- <div class="splash-screen">
         <img src="img/beachsplash.jpg" alt="Logo" class="logo ">
-        <!-- <textt class="text-white p-4 font-bold text-xl">Aminva</textt> -->
-    </div>
+    </div> -->
     <nav class=" fixed bg-black top-0 z-50  py-4 w-full pb-2" style="font-family:'Anton', sans-serif; width: 100vw;">
         <div class="container mx-auto flex justify-between items-center">
             <div class="text-black ">
@@ -101,8 +107,8 @@
         </div> 
         <div class="flex lg:flex-row flex-col  ">
             <div class="flex flex-col lg:w-1/3">
-                <div class="text-white bg-cover bg-center h-96 hideme" style="background-image: url('img/pexels-alexazabache-3250362.jpg');">
-                    <h2 class="text-3xl md:text-4xl mb-6 text-left pb-40 p-6 hideme">Explore the Island</h2>
+                <div class="text-white bg-cover bg-center h-96 " style="background-image: url('img/pexels-alexazabache-3250362.jpg');">
+                    <h2 class="text-3xl md:text-4xl mb-6 text-left pb-40 p-6 ">Explore the Island</h2>
                 </div>
                 <div class="text-white bg-cover bg-center" style="background-image: url('img/pexels-alexazabache-3250362.jpg');">
                     <div class="p-6 backdrop-blur-3xl h-full">
@@ -114,10 +120,10 @@
             </div>
             
             <div class="flex flex-col lg:w-1/3">
-                <div class="text-white bg-cover bg-center h-96 hideme" style="background-image: url('img/sigiriya.jpg');">
-                    <h2 class="text-3xl md:text-4xl mb-6 text-left pb-40 p-6 hideme">The Golden Triangle</h2>
+                <div class="text-white bg-cover bg-center h-96 " style="background-image: url('img/sigiriya.jpg');">
+                    <h2 class="text-3xl md:text-4xl mb-6 text-left pb-40 p-6 ">The Golden Triangle</h2>
                 </div>
-                <div class="text-white bg-cover bg-center hideme" style="background-image: url('img/sigiriya.jpg');">
+                <div class="text-white bg-cover bg-center " style="background-image: url('img/sigiriya.jpg');">
                     <div class="p-6 backdrop-blur-3xl h-full">
                         <p class="mb-4 text-yellow-400 font-bold border-b border-yellow-400 hideme">14 nights and 15 days</p>
                         <p class="lg:mb-10 hideme">Kandy, Dambulla, Sigiriya</p>
@@ -127,10 +133,10 @@
             </div>
             
             <div class="flex flex-col lg:w-1/3">
-                <div class="text-white bg-cover bg-center h-96 hideme" style="background-image: url('img/beach.jpg');">
-                    <h2 class="text-3xl md:text-4xl mb-6 text-left pb-40 p-6 hideme">Relax on the Beach</h2>
+                <div class="text-white bg-cover bg-center h-96 " style="background-image: url('img/beach.jpg');">
+                    <h2 class="text-3xl md:text-4xl mb-6 text-left pb-40 p-6 ">Relax on the Beach</h2>
                 </div>
-                <div class="text-white bg-cover bg-center hideme" style="background-image: url('img/beach.jpg');">
+                <div class="text-white bg-cover bg-center " style="background-image: url('img/beach.jpg');">
                     <div class="p-6 backdrop-blur-3xl h-full">
                         <p class="mb-4 text-yellow-400 font-bold border-b border-yellow-400 hideme">14 nights and 15 days</p>
                         <p class="lg:mb-10 hideme">Bentota, Hikkaduwa, Galle, Unawatuna, Mirissa, Weligama</p>
@@ -144,8 +150,69 @@
     <section class="py-16 bg-w mhite min-h-screen md:px-12 border-b border-yellow-600 ">
         <div class="container px-4">
             <h2 class="text-3xl text-black md:text-4xl font-bold mb-6 text-left hideme">Services</h2>
-            <p class="text-left mb-12 text-md text-gray-900 font-thin hideme">The sections below and other pages are under construction :)</p>
+            <p class="text-left mb-12 text-md text-gray-900 font-thin hideme">Explore our premium services designed to enhance your travel experience. From luxurious accommodations and boutique villas to seamless transportation options, we cater to all your needs. We also prioritize sustainable tourism, ensuring your journey leaves a positive impact on the environment and local communities. Discover the perfect blend of comfort, convenience, and responsibility in your travels with us.</p>
         </div> 
+        <div class="flex flex-col lg:flex-row ">
+            <!-- Sidebar -->
+            <div class="w-1/4 bg-black text-white p-5">
+                <div class="flex flex-col space-y-4">
+                    <button id="btn1" class="p-3 text-left hover:border-b border-yellow-600">Unique Experiences</button>
+                    <button id="btn2" class="p-3 text-left hover:border-b border-yellow-600">Transport & accommodation</button>
+                    <button id="btn3" class="p-3 text-left hover:border-b border-yellow-600">Boutique villas</button>
+                    <button id="btn4" class="p-3 text-left hover:border-b border-yellow-600">Personalized Journeys</button>
+                    <button id="btn5" class="p-3 text-left hover:border-b border-yellow-600">Sustainable tourism </button>
+
+                </div>
+            </div>
+    
+            <!-- Main Content -->
+            <div class="w-3/4 p-5">
+                <div id="content" class="bg-white p-5 rounded shadow-md">
+                    <!-- Content divs -->
+                    <div id="content1" class="content-div">
+                        <p>This is content for Button 1.</p>
+                    </div>
+                    <div id="content2" class="content-div">
+                        <p>This is content for Button 2.</p>
+                    </div>
+                    <div id="content3" class="content-div">
+                        <p>This is content for Button 3.</p>
+                    </div>
+                    <div id="content4" class="content-div">
+                        <p>This is content for Button 4.</p>
+                    </div>
+                    <div id="content5" class="content-div">
+                        <p>This is content for Button 5.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            $(document).ready(function(){
+                // Function to handle button click
+                function handleButtonClick(buttonId, contentId) {
+                    $(buttonId).click(function(){
+                        // Hide all content divs and remove underline from all buttons
+                        $(".content-div").hide();
+                        $(".flex button").removeClass("border-b border-white");
+        
+                        // Show the selected content div and add underline to the clicked button
+                        $(contentId).show();
+                        $(buttonId).addClass("border-b border-yellow-600");
+                    });
+                }
+        
+                // Setup click handlers for buttons
+                handleButtonClick("#btn1", "#content1");
+                handleButtonClick("#btn2", "#content2");
+                handleButtonClick("#btn3", "#content3");
+                handleButtonClick("#btn4", "#content4");
+                handleButtonClick("#btn5", "#content5");
+                // Simulate click on the first button by default
+                $("#btn1").click();
+            });
+        </script>
         
     </section>
     <footer class="bg-yellow-600 text-white py-12">
@@ -214,7 +281,7 @@
                     /* If the object is completely visible in the window, fade it it */
                     if( bottom_of_window > bottom_of_object ){
                         
-                        $(this).animate({'opacity':'1'},500);
+                        $(this).animate({'opacity':'1'},400);
                             
                     }
                     
