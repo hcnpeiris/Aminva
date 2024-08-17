@@ -49,3 +49,33 @@
 {
     opacity:0;
 }
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.slide-in-right {
+  opacity: 0;
+  animation: slideRight 0.9s ease-out 2.2s forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  opacity: 0;
+  animation: slideLeft 0.9s ease-out 2.2s forwards;
+}
