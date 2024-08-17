@@ -25,20 +25,20 @@
     <!-- <div class="splash-screen">
         <img src="img/beachsplash.jpg" alt="Logo" class="logo ">
     </div> -->
-    <nav class=" fixed bg-white top-0 z-50 border-b border-yellow-600 pb-3 w-full " style="font-family:'Anton', sans-serif; width: 100vw;">
+    <nav class=" fixed bg-white top-0 z-50 border-b border-yellow-500 pb-3 w-full " style="font-family:'Anton', sans-serif; width: 100vw;">
         <div class="container mx-auto flex justify-between items-center">
             <div class="text-black justify-center mt-2 items-center ">
                 <a href="#">
-                    <textt class="text-black px-4 font-bold mt-4 text-xl">Aminva</textt>
+                    <textt class="text-black px-4 font-light mt-4 text-3xl">Aminva</textt>
                     <!-- <img src="img/navlogo.png" alt="Aminva Leirsure" class="w-40"> -->
                 </a>
 
             </div>
             <div class="hidden md:flex flex-grow items-center justify-end pt-4 pr-4">
-                <a href="index.html" class="text-yellow-600 text-sm font-bold mx-6 hover:text-gray-500">Home</a>
+                <a href="index.html" class="text-yellow-500 text-sm font-bold mx-6 hover:text-gray-500">Home</a>
                 <a href="services.html" class="text-gray-700 text-sm  mx-6 hover:text-gray-400">villas</a>
                 <a href="villas.html" class="text-gray-700 t text-sm  mx-6 hover:text-gray-500">Services</a>
-                <a href="about.html" class="text-gray-100 bg-yellow-600  text-sm  py-2 mx-4 px-6 hover:text-white hover:bg-yellow-700">Inquire now</a>
+                <a href="about.html" class="text-gray-100 bg-yellow-500  text-sm  py-2 mx-4 px-6 hover:text-gray-500 hover:bg-yellow-100">Inquire now</a>
 
             </div>
             <div class="md:hidden px-3">
@@ -53,26 +53,41 @@
         </div>
         <div class="md:hidden" id="mobile-nav" style="display: none;">
             <div class="bg-white text-sm p-4 pl-6">
-                <a href="index.html" class="block text-yellow-600 py-2" >Home</a>
+                <a href="index.html" class="block text-yellow-500 py-2" >Home</a>
                 <a href="villas.html" class="block text-black py-2">Villas</a>
                 <a href="service.html" class="block text-black py-2">Services</a>
                 <a href="about.html" class="block text-black py-2">Book</a>
             </div>
         </div>
     </nav>
-    <header class="relative bg-cover bg-center min-h-screen pt-16" style="background-image: url('https://images.pexels.com/potos/1001965/pexels-photo-1001965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+    <header class="relative bg-cover bg-center  py-16 pt-24" >
         <div class="relative container mx-auto h-full flex lg:flex-row flex-col">
+            <p class="lg:hidden text-4xl  text-black font-bold text-center">Aminva</p>
             <div class="lg:w-1/2 p-4 items-center justify-center pr-9 slide-in-right">
-                <p class="lg:hidden text-4xl  text-white font-bold text-center">Aminva</p>
-                 <img src="img/banner.png" alt="Aminva Leirsure" class="p-3 m-3 mb-0 lg:pt-5 " >
+                <div id="image-slider" class="splide items-center justify-center">
+                    <div class="splide__track items-center justify-center">
+                        <ul class="splide__list ">
+                            <li class="splide__slide">
+                                <img src="img/flower.png" alt="Sri Lanka" class="roundborder border-yellow-700">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="img/beach.png" alt="Image 2" class="roundborder border-yellow-700">
+                            </li>
+                        </ul>
+                    </div>
+                </div>  
+                
             </div>
-            <div class="lg:w-1/2 m-3 pb-6 px-6 flex flex-col justify-center lg:my-10 lg:border-l-2 border-yellow-600 slide-in-left">
+            <div class="lg:w-1/2 m-3 pb-6 px-6 flex flex-col justify-center lg:my-10 lg:border-l-2 border-yellow-500 slide-in-left">
                  <!-- <img src="img/Aminva.png" alt="Aminva Leirsure" class="w-80"> -->
-                <p class="lg:text-3xl text-2xl hidden lg:block text-black font-bold mb-8">Welcome to Aminva</p>
-                <hr class="border-t-2 lg:hidden border-yellow-600 mb-3 ">
-                <p class="text-md md:text-md font-bold text-gray-700 mb-8 ">Experience unparalleled luxury and comfort</p>
-                <p class="text-xs md:text-xs text-gray-500 mb-8 ">Explore Sri Lankan cuisine rich in colors and spices, or relax your body and your soul with Ayurveda Therapy. We focus on letting experience the true essence of the island like we would love to experiencing our selves. Welcome to our Paradise island and explore with us Sri Lanka!</p>
-                <a href="about.html" class="text-white bg-yellow-600 text-center lg:w-1/4 w-1/2 text-sm  py-2 px-6 hover:text-gray-500">Explore more</a>
+                <p class="lg:text-4xl text-2xl hidden font-thin lg:block text-black  mb-8">Welcome to Aminva</p>
+                <hr class="border-t-2 lg:hidden border-yellow-500 mb-3 ">
+                <p class="text-md md:text-md font-thin  text-gray-600 mb-8 ">Experience unparalleled luxury and comfort</p>
+                <p class="text-sm md:text-sm text-gray-500 font-thin mb-8 ">Explore Sri Lankan cuisine rich in colors and spices, or relax your body and your soul with Ayurveda Therapy. We focus on letting experience the true essence of the island like we would love to experiencing our selves. Welcome to our Paradise island and explore with us Sri Lanka!</p>
+                <div class="flex-row space-x-2">
+                    <a href="about.html" class="text-white bg-yellow-500 text-center lg:w-1/4 w-1/2 text-sm  py-2 px-6 hover:text-gray-500  hover:bg-yellow-100">Inquire now</a>
+                    <a href="about.html" class="text-gray-500 bg-yellow-200 text-center lg:w-1/4 w-1/2 text-sm  py-2 px-6 hover:text-gray-500  hover:bg-yellow-100">Explore more</a>
+                </div>
             </div>
         </div>
     </div>
@@ -91,45 +106,18 @@
                         We focus on letting experience the true essence of the island like we would love to experiencing our selves. 
                         Welcome to our Paradise island and explore with us Sri Lanka! </p>
                     <div class="flex">
-
                     </div>
                 </div>
                 <div class="w-full md:w-1/2">
-                    <div id="image-slider" class="splide">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide">
-                                    <img src="img/cheader.png" alt="Sri Lanka" class="roundborder border-yellow-700">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="img/train.jpg" alt="Image 1" class="roundborder border-yellow-700">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="img/1.png" alt="Image 2" class="roundborder border-yellow-700">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="img/3.png" alt="Image 3" class="roundborder border-yellow-700">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="img/4.png" alt="Image 4" class="roundborder border-yellow-700">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="img/5.png" alt="Image 5" class="roundborder border-yellow-700">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="img/6.png" alt="Image 6" class="roundborder border-yellow-700">
-                                </li>
-                            </ul>
-                        </div>
-                    </div>                    
+                    <img src="img/cheader.png" alt="Aminva Leirsure" class="w-full hideme">
                 </div>
             </div>
         </div>
     </section> 
-    <section class="py-16 bg-black md:px-12 border-b border-yellow-600 ">
+    <section class="py-16 bg-white md:px-12 border-b border-yellow-600 ">
         <div class="container px-4">
-            <h2 class="text-3xl text-white md:text-4xl font-bold mb-6 text-left hideme">Packages</h2>
-            <p class="text-left mb-12 text-md text-gray-100 font-thin hideme">Discover the beauty of Sri Lanka with Aminva Leisure’s most popular destinations! Choose from our ready-made packages or customize your journey based on your budget and interests. We also offer exciting daily tour activities to enrich your travel experience.</p>
+            <h2 class="text-3xl text-black md:text-4xl font-bold mb-6 text-left hideme">Packages</h2>
+            <p class="text-left mb-12 text-md text-gray-800 font-thin hideme">Discover the beauty of Sri Lanka with Aminva Leisure’s most popular destinations! Choose from our ready-made packages or customize your journey based on your budget and interests. We also offer exciting daily tour activities to enrich your travel experience.</p>
         </div> 
         <div class="flex lg:flex-row flex-col  ">
             <div class="flex flex-col lg:w-1/3">
@@ -323,7 +311,7 @@
                 type   : 'loop',
                 perPage: 1, // Number of images visible at a time
                 autoplay: true,
-                interval: 3000, // Time between slides in milliseconds
+                interval: 4000, // Time between slides in milliseconds
                 pauseOnHover: false,
             }).mount();
         });
