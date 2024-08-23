@@ -1,3 +1,7 @@
+body, h1, h2, h3, h4, h5, h6, p, a, span, li, blockquote {
+  font-family: "Merriweather Sans", sans-serif;
+  font-optical-sizing: auto;
+}
 /* Splash screen styles */
 .splash-screen {
   position: fixed;
