@@ -25,14 +25,13 @@
 
 
 <body class="bg-white">
-    <div class="splash-screen bg-[url('img/beachsplash.jpg')] bg-cover bg-center w-full">
-        <!-- <img src="img/beachsplash.jpg" alt="Logo" class="logo "> -->
+    <!-- <div class="splash-screen bg-[url('img/beachsplash.jpg')] bg-cover bg-center w-full">
         <img src="img/nobglogo-white.png" alt="Logo" class="w-64 justify-center items-center ">
-    </div>
-    <nav class=" fixed bg-yellow-50 top-0 z-50   w-full " style="font-family:'Anton', sans-serif; width: 100vw;">
+    </div> -->
+    <nav class=" fixed bg-yellow-50 top-0 z-50 py-3 w-full " style="font-family:'Anton', sans-serif; width: 100vw;">
         <div class="container mx-auto flex justify-between items-center">
             <div class="text-black justify-center m-2 items-center ">
-                <a href="#">
+                <a href="index.html">
                     <!-- <textt class="text-black px-4 font-light mt-4 text-3xl">AMINVA</textt> -->
                     <img src="img/nobglogo-white.png" alt="AMINVA Leirsure" class="w-24 invert">
                 </a>
@@ -64,21 +63,21 @@
             </div>
         </div>
     </nav>
-    <header class="relative bg-cover bg-center py-16 pt-24">
+    <header class="relative bg-cover bg-center pb-10 pt-28">
         <div class="relative container mx-auto h-full flex lg:flex-row flex-col">
-            <p class="lg:hidden text-4xl text-black font-light text-center">Aminva</p>
-            <div class="lg:w-1/2 p-4 items-center justify-center px-9 slide-in-right">
+            <!-- <p class="lg:hidden text-4xl text-black font-light text-center">Aminva</p> -->
+            <div class="lg:w-1/2 p-4  items-center justify-center px-9 slide-in-right">
                 <div id="image-slider" class="splide items-center justify-center">
                     <div class="splide__track items-center justify-center">
                         <ul class="splide__list">
                             <li class="splide__slide">
-                                <img src="img/flower.png" alt="Sri Lanka" class="roundborder border-yellow-700">
+                                <img src="img/flower.png" alt="Sri Lanka" class="roundborder border-yellow-700 h-72 object-cover">
                             </li>
                             <li class="splide__slide">
-                                <img src="img/beach.png" alt="Image 2" class="roundborder border-yellow-700">
+                                <img src="img/beach.png" alt="Image 2" class="roundborder border-yellow-700 h-72 object-cover">
                             </li>
                             <li class="splide__slide">
-                                <img src="img/surf.png" alt="Image 2" class="roundborder border-yellow-700">
+                                <img src="img/surf.png" alt="Image 2" class="roundborder border-yellow-700 h-72 object-cover">
                             </li>
                         </ul>
                     </div>
@@ -89,12 +88,11 @@
                 <p class="lg:text-4xl text-2xl hidden font-thin lg:block text-black mb-8">Welcome to Aminva</p>
                 <hr class="border-t-2 lg:hidden border-yellow-500 mb-3">
                 <p class="text-md md:text-md font-thin text-gray-600 mb-8">Experience unparalleled luxury and comfort</p>
-                <p class="text-sm md:text-sm text-gray-500 font-thin mb-8 text-justify">Explore Sri Lankan cuisine rich in colors and spices, or relax your body and your soul with Ayurveda Therapy. We focus on letting you experience the true essence of the island like we would love to experience ourselves. Welcome to our Paradise island and explore with us Sri Lanka!</p>
                 <div class="flex-row  space-x-2 mb-4">
                     <a href="about.html" class="text-white  bg-yellow-500 text-center lg:w-1/4 w-1/2 text-sm py-2 px-6 hover:text-gray-500 hover:bg-yellow-100">Inquire now</a>
                     <a href="villas.html" class="text-gray-500 bg-yellow-200 text-center lg:w-1/4 w-1/2 text-sm py-2 px-6 hover:text-gray-500 hover:bg-yellow-100">Explore villas </a>
                 </div>
-                <a href="services.html" class=" lg:hidden text-gray-500 bg-yellow-200 text-center lg:w-1/4 w-1/2 text-sm py-1 px-6 hover:text-gray-500 hover:bg-yellow-100">Services</a>
+                <a href="#tours" class=" lg:hidden text-gray-500 bg-yellow-200 text-center w-2/3 text-sm py-1 px-6 hover:text-gray-500 hover:bg-yellow-100">Travel and Tours</a>
                 <!-- Contact Info & Social Icons -->
                 <div class="flex flex-col lg:flex-row items-center justify-between mt-6">
                     <div class="text-gray-600 text-sm justify-center items-center">
@@ -113,10 +111,31 @@
                         </a>
                     </div>
                 </div>
+                <p class="hidden lg:block text-xs md:text-xs text-gray-500 font-thin py-5 text-justify">Explore Sri Lankan cuisine rich in colors and spices, or relax your body and your soul with Ayurveda Therapy. We focus on letting you experience the true essence of the island like we would love to experience ourselves. Welcome to our Paradise island and explore with us Sri Lanka!</p>
+
             </div>
         </div>
     </header>
-    <section class="py-16 px-4 border-t border-yellow-600 md:px-12 bg-white border-b border-yellow-600 ">
+    <section class="py-16  px-4 border-t border-yellow-600 md:px-12 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-thin text-left mb-4 px-4 hideme">Gallery </h2>
+            <div class="flex flex-wrap items-center justify-center px-4">
+                <div class="grid lg:grid-cols-4 grid-cols-2 md:grid-cols-2 py-3 gap-2">
+                    <img src="img/gallery1.jpg" class="w-full h-52 object-cover rounded-lg hideme">
+                    <img src="img/gallery2.jpg" class="w-full h-52 object-cover rounded-lg hideme">
+                    <img src="img/gallery3.jpg" class="w-full h-52 object-cover rounded-lg hideme">
+                    <img src="img/gallery4.jpg" class="w-full h-52 object-cover rounded-lg hideme">
+                    <img src="img/gallery5.jpg" class="w-full h-52 object-cover rounded-lg hideme">
+                    <img src="img/gallery6.jpg" class="w-full h-52 object-cover rounded-lg hideme">
+                    <img src="img/gallery7.jpg" class="w-full h-52 object-cover rounded-lg hideme">
+                    <img src="img/gallery8.jpg" class="w-full h-52 object-cover rounded-lg hideme">
+                    <!-- <img src="img/gallery9.jpg" class="w-full h-52 object-cover rounded-lg hideme"> -->
+                    <!-- <img src="img/gallery10.jpg" class="w-full h-52 object-cover rounded-lg hideme"> -->
+                </div>                                    
+            </div>
+        </div>
+    </section>   
+    <section class="py-16  px-4 border-t border-yellow-600 md:px-12 bg-white border-b border-yellow-600 ">
         <div class="container mx-auto">
             <div class="flex flex-wrap items-center justify-center">
                 <div class="w-full md:w-1/2 md:pr-9 mb-8 md:mb-0 justify-center items-center">
@@ -137,7 +156,7 @@
                 </div>
             </div>
         </div>
-    </section> 
+    </section>     
     <section id="tours" class="py-16 bg-white px-6 lg:mx-10 border-b border-yellow-600 ">
         <div class="  px-2">
             <h2 class="text-4xl text-black md:text-4xl font-thin mb-6 text-left hideme">Packages</h2>
