@@ -109,3 +109,15 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, blockquote {
     transform: translate3d(4px, 0, 0);
   }
 }
+
+  /* Default background image for screens 768px and above */
+  header {
+    background-image: url('img/beach.png');
+  }
+
+  /* Background image for screens smaller than 768px */
+  @media (max-width: 1024px) {
+    header {
+      background-image: url('img/banner.png');
+    }
+  }
