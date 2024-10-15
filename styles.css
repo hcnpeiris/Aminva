@@ -83,3 +83,29 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, blockquote {
   opacity: 0;
   animation: slideLeft 0.9s ease-out 2.2s forwards;
 }
+
+
+.first_button {
+  animation: shake 2.32s cubic-bezier(.36, .07, .19, .97) both infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  25%, 75% {
+    transform: translate3d(0, 0, 0);
+  }
+  30%, 70% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  35%, 65% {
+    transform: translate3d(2px, 0, 0);
+  }
+  40%, 50%, 60% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  45%, 55% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
