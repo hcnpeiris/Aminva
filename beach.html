@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <title>Aminva</title>
+    <style>
+        .content-div {
+            display: none; 
+        }
+
+    </style>
+</head>
+
+
+<body class="">
+    <div class="splash-screen bg-[url('img/beachsplash.jpg')] bg-cover bg-center w-full">
+        <img src="img/nobglogo-white.png" alt="Logo" class="w-64 justify-center items-center ">
+    </div>
+    <!-- <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v18.0"
+        nonce="pJ7Mpb3y"></script> -->
+    
+    <header class="relative bg-cover bg-center min-h-screen" style="background-image: url('img/beach.png');">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="relative z-10 flex flex-col h-full justify-between px-6 text-white">
+            <nav class=" lg:bg-transparent top-0 z-50 py-3 lg:py-0" style="font-family:'Anton', sans-serif;">
+                <div class="container mx-auto flex justify-between items-center">
+                    <div class="text-black justify-center mx-2 items-center ">
+                        <a href="index.html">
+                            <img src="img/nobglogo-white.png" alt="Aminva Leirsure" class="w-24 mx-2  ">
+                        </a>
+        
+                    </div>
+                    <div class="hidden font-bold md:flex flex-grow items-center justify-end py-4 pr-4">
+                        <a href="index.html" class="text-yellow-400 text-sm font-bold mx-6 hover:text-gray-500">Home</a>
+                        <a href="villas.html" class="text-gray-100 text-sm  mx-6 hover:text-gray-400">villas</a>
+                        <a href="services.html" class="text-gray-100 t text-sm  mx-6 hover:text-gray-500">Services</a>
+                        <a href="https://form.jotform.com/242385111139451" class="inline-block text-sm bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 rounded font-semibold">Inquire now</a>
+        
+                    </div>
+                    <div class="md:hidden px-3">
+                        <button id="nav-toggle" class="text-white focus:outline-none">
+                            <svg class="w-6 h-6" fill="" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="md:hidden" id="mobile-nav" style="display: none;">
+                    <div class="bg-yellow-50 text-sm p-4 pl-6">
+                        <a href="index.html" class="block text-yellow-500 py-2" >Home</a>
+                        <a href="villas.html" class="block text-black py-2">Villas</a>
+                        <a href="services.html" class="block text-black py-2">Services</a>
+                        <a href="https://form.jotform.com/242385111139451" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 rounded font-semibold">Book</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="w-full flex flex-col lg:flex-row px-4 py-14">
+                <div class="w-full lg:w-1/4 flex flex-col items-start justify-end p-4">
+                    <h2 class="text-xl font-bold uppercase">Welcome to<br><span class="text-5xl">Sri Lanka</span></h2>
+                    <p class="mt-2">Experience unparalleled luxury and comfort</p>
+                    <a href="https://form.jotform.com/242385111139451" class="mt-6 first_button inline-block bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 rounded font-semibold">Book now</a>
+                </div>
+                <div class="hidden lg:grid lg:w-3/4 grid grid-cols-3 gap-10 p-4 px-8 pl-24">
+                    <div class="relative bg-white shadow-2xl rounded-2xl overflow-hidden h-96">
+                        <img src="img/card1.png" class="absolute inset-0 object-cover m-auto">
+                        <div class="absolute inset-0"></div>
+                        <div class="absolute top-0 p-4 bg-gradient-to-b pb-10 bg-opacity-5 from-black/50 w-full bg-opacity-50">
+                            <h3 class="text-lg text-white font-bold">Explore the Island</h3>
+                        </div>
+                        <div class="absolute bottom-0 right-0 p-4 bg-gradient-to-t from-black">
+                            <p class="text-xs font-light text-gray-300">Experience Sri Lanka's rich history and stunning landscapes on this comprehensive tour. From ancient cities to breathtaking beaches, this journey blends culture, nature, and relaxation perfectly.</p>
+                        </div>
+                    </div>
+                    <div class="relative bg-white shadow-2xl rounded-2xl overflow-hidden h-96">
+                        <img src="img/card2.png" class="absolute inset-0 object-cover  m-auto">
+                        <div class="absolute inset-0"></div>
+                        <div class="absolute top-0 p-4 bg-gradient-to-b pb-10 bg-opacity-5 from-black/50 w-full bg-opacity-50 ">
+                            <h3 class="text-lg text-white font-bold">The Golden Triangle</h3>
+                        </div>
+                        <div class="absolute bottom-0 right-0 p-4 bg-gradient-to-t from-black">
+                            <p class="text-xs font-light text-gray-300">Delve into the heart of Sri Lanka's cultural heritage with this tour of the Golden Triangle. Explore ancient temples, magnificent palaces, and lush landscapes, all while enjoying the warmth and hospitality of the local people.</p>
+                        </div>
+                    </div>
+                    <div class="relative bg-white shadow-2xl rounded-2xl overflow-hidden h-96">
+                        <img src="img/card3.png" class="absolute inset-0 object-cover m-auto">
+                        <div class="absolute inset-0"></div>
+                        <div class="absolute top-0 p-4 bg-gradient-to-b pb-10 bg-opacity-5 from-black/50 w-full bg-opacity-50 ">
+                            <h3 class="text-lg text-white font-bold">Relax on the Beach</h3>
+                        </div>
+                        <div class="absolute bottom-0 right-0 p-4 bg-gradient-to-t from-black">
+                            <p class="text-xs font-light text-gray-300">Unwind on the pristine beaches of Sri Lanka with our "Relax on the Beach" package. Soak up the sun, enjoy water sports, and indulge in fresh seafood while staying at luxurious beachfront resorts.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:hidden p-4 justify-start items-start ">
+                    <div id="card-carousel" class="splide" aria-label="Tour Cards Carousel">
+                        <div class="splide__track">
+                           <ul class="splide__list">
+                              <li class="splide__slide">
+                                 <div class="relative bg-white shadow-2xl rounded-2xl overflow-hidden h-96">
+                                    <img src="img/card1.png" class="absolute inset-0 object-cover m-auto">
+                                    <div class="absolute inset-0"></div>
+                                    <div class="absolute top-0 p-4 bg-gradient-to-b pb-10 bg-opacity-5 from-black/50 w-full bg-opacity-50">
+                                       <h3 class="text-lg text-white font-bold">Explore the Island</h3>
+                                    </div>
+                                    <div class="absolute bottom-0 right-0 p-4 bg-gradient-to-t from-black">
+                                       <p class="text-xs font-light text-gray-300">Experience Sri Lanka's rich history and stunning landscapes on this comprehensive tour...</p>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li class="splide__slide">
+                                 <div class="relative bg-white shadow-2xl rounded-2xl overflow-hidden h-96">
+                                    <img src="img/card2.png" class="absolute inset-0 object-cover m-auto">
+                                    <div class="absolute inset-0"></div>
+                                    <div class="absolute top-0 p-4 bg-gradient-to-b pb-10 bg-opacity-5 from-black/50 w-full bg-opacity-50">
+                                       <h3 class="text-lg text-white font-bold">The Golden Triangle</h3>
+                                    </div>
+                                    <div class="absolute bottom-0 right-0 p-4 bg-gradient-to-t from-black">
+                                       <p class="text-xs font-light text-gray-300">Delve into the heart of Sri Lanka's cultural heritage with this tour of the Golden Triangle...</p>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li class="splide__slide">
+                                 <div class="relative bg-white shadow-2xl rounded-2xl overflow-hidden h-96">
+                                    <img src="img/card3.png" class="absolute inset-0 object-cover m-auto">
+                                    <div class="absolute inset-0"></div>
+                                    <div class="absolute top-0 p-4 bg-gradient-to-b pb-10 bg-opacity-5 from-black/50 w-full bg-opacity-50">
+                                       <h3 class="text-lg text-white font-bold">Relax on the Beach</h3>
+                                    </div>
+                                    <div class="absolute bottom-0 right-0 p-4 bg-gradient-to-t from-black">
+                                       <p class="text-xs font-light text-gray-300">Unwind on the pristine beaches of Sri Lanka with our "Relax on the Beach" package...</p>
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="py-16  px-4 border-t border-yellow-600 md:px-12 bg-white border-b border-yellow-600 ">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap items-center justify-center">
+                <div class="w-full md:w-1/2 md:pr-9 mb-8 md:mb-0 justify-center items-center">
+                    <h2 class="text-3xl md:text-4xl font-thin text-left mb-4 px-4 hideme">Our Story </h2>
+                    <p class="text-sm font-light text-left mb-6 text-gray-600 hideme px-5 text-justify">We are a trusted and locally owned company that has been offering unforgettable memories since 2017. 
+                        We are a small family who dreams of living in our beautiful island Sri Lanka has brought us together to explore Sri Lanka.<br>
+                        We took small steps and create AMINVA Leisure with the mission of showing the beauty and diversity of our paradise island and offering small boutique villa lodgings. 
+                        Everyone is welcome to explore Sri Lanka with us! Weather you are a solo traveler, a group of friends, a family with children or a couple we can tailor the perfect journey for you. 
+                        A journey with breathtaking landscapes, vibrant wildlife, untouched coastlines, ancient ruins and colonial history, modern cities and timeless rural villages. <br>
+                        You can explore Sri Lankan cuisine rich in colors and spices, or relax your body and your soul with Ayurveda Therapy. 
+                        We focus on letting experience the true essence of the island like we would love to experiencing our selves. 
+                        Welcome to our Paradise island and explore with us Sri Lanka! </p>
+                    <div class="flex">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 px-4">
+                    <img src="img/cheader.png" alt="AMINVA Leirsure" class="w-full hideme">
+                </div>
+            </div>
+        </div>
+    </section>  
+    <section class="py-16  px-4 border-b border-yellow-600 md:px-12 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-thin text-left mb-4 px-4 hideme">Gallery </h2>
+            <div class="flex flex-wrap items-center justify-center px-4">
+                <div class="grid lg:grid-cols-4 grid-cols-2 md:grid-cols-2 py-3 gap-2">
+                    <img src="img/gallery1.jpg" class="w-full h-52 object-cover rounded-lg hideme">
+                    <img src="img/gallery2.jpg" class="w-full h-52 object-cover rounded-lg hideme">
+                    <img src="img/gallery3.jpg" class="w-full h-52 object-cover rounded-lg hideme">
+                    <img src="img/gallery4.jpg" class="w-full h-52 object-cover rounded-lg hideme">
+                    <img src="img/gallery5.jpg" class="w-full h-52 object-cover rounded-lg hideme">
+                    <img src="img/gallery6.jpg" class="w-full h-52 object-cover rounded-lg hideme">
+                    <img src="img/gallery7.jpg" class="w-full h-52 object-cover rounded-lg hideme">
+                    <img src="img/gallery8.jpg" class="w-full h-52 object-cover rounded-lg hideme">
+                </div>                                    
+            </div>
+        </div>
+    </section>   
+    <section class="py-12 border-b border-yellow-600">
+        <div class=" mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-thin text-center mb-4 px-4  hideme">Our Services</h2>
+            <p class="my-6 text-gray-600 text-sm px-8 lg:px-16 text-justify font-light">Explore our diverse range of tailored services designed to make every moment of your journey through Sri Lanka memorable. From bespoke tours to luxurious accommodations, we ensure a unique and unforgettable experience for every traveler.</p>
+            
+            <div class="grid grid-cols-1 gap-8 mt-16 sm:grid-cols-2 lg:grid-cols-4 lg:px-14">
+                <!-- Airport pickup -->
+                <div class="flex flex-col items-center text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 bg-yellow-400 rounded-full p-3" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M381 114.9L186.1 41.8c-16.7-6.2-35.2-5.3-51.1 2.7L89.1 67.4C78 73 77.2 88.5 87.6 95.2l146.9 94.5L136 240 77.8 214.1c-8.7-3.9-18.8-3.7-27.3 .6L18.3 230.8c-9.3 4.7-11.8 16.8-5 24.7l73.1 85.3c6.1 7.1 15 11.2 24.3 11.2l137.7 0c5 0 9.9-1.2 14.3-3.4L535.6 212.2c46.5-23.3 82.5-63.3 100.8-112C645.9 75 627.2 48 600.2 48l-57.4 0c-20.2 0-40.2 4.8-58.2 14L381 114.9zM0 480c0 17.7 14.3 32 32 32l576 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 448c-17.7 0-32 14.3-32 32z"/></svg>                    
+                    <h3 class="mt-4 text-lg font-semibold text-gray-900">Airport pickup</h3>
+                    <p class="mt-2 text-gray-600 text-xs font-light">We provide escort from the airport to the hotel!</p>
+                </div>
+
+                <!-- Easy booking -->
+                <div class="flex flex-col items-center text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 bg-yellow-400 rounded-full p-3" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M135.2 117.4L109.1 192l293.8 0-26.1-74.6C372.3 104.6 360.2 96 346.6 96L165.4 96c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32l181.2 0c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2l0 144 0 48c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-48L96 400l0 48c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-48L0 256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
+                    <h3 class="mt-4 text-lg font-semibold text-gray-900">Custom-Made Tours</h3>
+                    <p class="mt-2 text-gray-600 text-xs font-light">Tailor-made tours across Sri Lanka for every preference.</p>
+                </div>
+
+                <!-- Best tour guide -->
+                <div class="flex flex-col items-center text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 bg-yellow-400 rounded-full p-3" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M384 476.1L192 421.2l0-385.3L384 90.8l0 385.3zm32-1.2l0-386.5L543.1 37.5c15.8-6.3 32.9 5.3 32.9 22.3l0 334.8c0 9.8-6 18.6-15.1 22.3L416 474.8zM15.1 95.1L160 37.2l0 386.5L32.9 474.5C17.1 480.8 0 469.2 0 452.2L0 117.4c0-9.8 6-18.6 15.1-22.3z"/></svg>
+                    <h3 class="mt-4 text-lg font-semibold text-gray-900">Accommodation & Transport</h3>
+                    <p class="mt-2 text-gray-600 text-xs font-light">Lodging and transport tailored to your needs</p>
+                </div>
+
+                <!-- Lots of promos -->
+                <div class="flex flex-col items-center text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 bg-yellow-400 rounded-full p-3" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M346.3 271.8l-60.1-21.9L214 448 32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l512 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-261.9 0 64.1-176.2zm121.1-.2l-3.3 9.1 67.7 24.6c18.1 6.6 38-4.2 39.6-23.4c6.5-78.5-23.9-155.5-80.8-208.5c2 8 3.2 16.3 3.4 24.8l.2 6c1.8 57-7.3 113.8-26.8 167.4zM462 99.1c-1.1-34.4-22.5-64.8-54.4-77.4c-.9-.4-1.9-.7-2.8-1.1c-33-11.7-69.8-2.4-93.1 23.8l-4 4.5C272.4 88.3 245 134.2 226.8 184l-3.3 9.1L434 269.7l3.3-9.1c18.1-49.8 26.6-102.5 24.9-155.5l-.2-6zM107.2 112.9c-11.1 15.7-2.8 36.8 15.3 43.4l71 25.8 3.3-9.1c19.5-53.6 49.1-103 87.1-145.5l4-4.5c6.2-6.9 13.1-13 20.5-18.2c-79.6 2.5-154.7 42.2-201.2 108z"/></svg>
+                    <h3 class="mt-4 text-lg font-semibold text-gray-900">Local Experiences</h3>
+                    <p class="mt-2 text-gray-600 text-xs font-light">Experience authentic Sri Lankan culture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="tours" class="py-16 bg-white px-6 lg:mx-10">
+        <div class="  px-2">
+            <h2 class="text-4xl text-black md:text-4xl font-thin mb-6 text-left hideme">Packages</h2>
+            <p class="text-sm font-light text-left mb-6 text-gray-600 hideme text-justify">Discover the beauty of Sri Lanka with AMINVA Leisure’s most popular destinations! Choose from our ready-made packages or customize your journey based on your budget and interests. We also offer exciting daily tour activities to enrich your travel experience.</p>
+        </div> 
+        <div class="grid grid-cols-1 lg:grid-cols-3 px-2">
+            <!-- Column 1 -->
+            <div class="grid grid-rows-2 ">
+                <div class="text-white bg-cover bg-center h-96" style="background-image: url('img/pexels-alexazabache-3250362.jpg');">
+                    <h2 class="text-3xl md:text-4xl text-left p-6">Explore the Island</h2>
+                </div>
+                <div class="text-white bg-cover bg-center" style="background-image: url('img/pexels-alexazabache-3250362.jpg');">
+                    <div class="px-6 py-4 backdrop-blur-3xl h-full">
+                        <p class="mb-4 text-yellow-400 font-bold border-b border-yellow-400 hideme">14 nights and 15 days</p>
+                        <p class="hideme">Negombo, Anuradhapura, Sigiriya, Polonnaruwa, Dambulla, Kandy, Nuwara Eliya, Ella, Bentota, Hikkaduwa, Galle, Mirissa, Colombo</p>
+                        <p class="mt-4 font-thin text-gray-50 hideme">Experience Sri Lanka's rich history and stunning landscapes on this comprehensive tour. From ancient cities to breathtaking beaches, this journey blends culture, nature, and relaxation perfectly.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Column 2 -->
+            <div class="grid grid-rows-2 ">
+                <div class="text-white bg-cover bg-center h-96" style="background-image: url('img/sigiriya.jpg');">
+                    <h2 class="text-3xl md:text-4xl mb-6 text-left pb-40 p-6">The Golden Triangle</h2>
+                </div>
+                <div class="text-white bg-cover bg-center" style="background-image: url('img/sigiriya.jpg');">
+                    <div class="p-6 backdrop-blur-3xl h-full">
+                        <p class="mb-4 text-yellow-400 font-bold border-b border-yellow-400 hideme">14 nights and 15 days</p>
+                        <p class="lg:mb-10 hideme">Kandy, Dambulla, Sigiriya</p>
+                        <p class="mt-4 font-thin text-gray-50 hideme">Delve into the heart of Sri Lanka's cultural heritage with this tour of the Golden Triangle. Explore ancient temples, magnificent palaces, and lush landscapes, all while enjoying the warmth and hospitality of the local people.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Column 3 -->
+            <div class="grid grid-rows-2 ">
+                <div class="text-white bg-cover bg-center h-96" style="background-image: url('img/beach.jpg');">
+                    <h2 class="text-3xl md:text-4xl  text-left p-6">Relax on the Beach</h2>
+                </div>
+                <div class="text-white bg-cover bg-center" style="background-image: url('img/beach.jpg');">
+                    <div class="p-6 backdrop-blur-3xl h-full">
+                        <p class="mb-4 text-yellow-400 font-bold border-b border-yellow-400 hideme">14 nights and 15 days</p>
+                        <p class="lg:mb-10 hideme">Bentota, Hikkaduwa, Galle, Unawatuna, Mirissa, Weligama</p>
+                        <p class="mt-4 font-thin text-gray-50 hideme">Unwind on the pristine beaches of Sri Lanka with our "Relax on the Beach" package. Soak up the sun, enjoy water sports, and indulge in fresh seafood while staying at luxurious beachfront resorts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!-- <section class="py-16  px-4 border-t border-yellow-600 md:px-12 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-thin text-left mb-4 px-4 hideme">Latest Update </h2>
+            <div class="p-4 " style="height: 600px;">
+                <div class="fb-page" data-href="https://www.facebook.com/aminvavilla" data-tabs="timeline"
+                data-width="" data-height="400" data-small-header="false" data-adapt-container-width="true"
+                data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/aminvavilla" class="fb-xfbml-parse-ignore"><a
+                        href="https://www.facebook.com/aminvavilla">Centigradz</a></blockquote>
+            </div>         </div>
+    </section> -->
+    <footer class="bg-yellow-400 text-black py-8">
+        <div class="container mx-auto px-8">
+          <div class="flex flex-wrap justify-between items-start">
+            
+            <!-- Logo and Description -->
+            <div class="w-full md:w-1/3 mb-6 md:mb-0">
+              <img src="img/nobglogo-white.png" alt="AMINVA Leirsure" class="w-24 mb-3 invert">
+              <p class="font-thin text-xs">Explore Sri Lanka with us and experience unforgettable memories</p>
+            </div>
+      
+            <!-- Links -->
+            <div class="w-full md:w-1/3 mb-6 md:pl-16 md:mb-0">
+              <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul class="">
+                <li><a href="index.html" class="font-thin text-xs hover:text-white">Home</a></li>
+                <li><a href="services.html" class="font-thin text-xs hover:text-white">Services</a></li>
+                <li><a href="villas.html" class="font-thin text-xs hover:text-white">Villas</a></li>
+                <li><a href="https://form.jotform.com/242385111139451" class="font-thin text-xs hover:text-white">Book now</a></li>
+              </ul>
+            </div>
+      
+            <!-- Contact Information -->
+            <div class="w-full md:w-1/3">
+              <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+              <div class="font-thin text-xs">
+                <p>Address: Sarath Goonawardana Mawatha, Hikkaduwa</p>
+                <p>Phone: +94 769125330</p>
+                <p>Phone: +94 726522347</p>
+                <p>Email: info.AMINVA@gmail.com</p>
+            </div>            </div>
+      
+          </div>
+      
+          <!-- Copyright -->
+          <div class="mt-8 border-t border-gray-900 pt-4 text-center text-gray-500">
+            <p class="text-xs text-gray-900">&copy; 2024 Aminva Leirsure. All rights reserved.</p>
+          </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#nav-toggle").click(function () {
+                $("#mobile-nav").slideToggle();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+    
+            /* Every time the window is scrolled ... */
+            $(window).scroll( function(){
+            
+                /* Check the location of each desired element */
+                $('.hideme').each( function(i){
+                    
+                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    
+                    /* If the object is completely visible in the window, fade it it */
+                    if( bottom_of_window > bottom_of_object ){
+                        
+                        $(this).animate({'opacity':'1'},500);
+                            
+                    }
+                    
+                }); 
+            
+            });
+            
+        });
+    </script>
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function () {
+           new Splide( '#card-carousel', {
+              type   : 'loop',
+              perPage: 1,
+              perMove: 1,
+              autoplay: true,
+              interval: 3000,
+              gap: '1rem',
+              breakpoints: {
+                 768: {
+                    perPage: 1,
+                 },
+                 1024: {
+                    perPage: 2,
+                 },
+                 1440: {
+                    perPage: 3,
+                 },
+              },
+           } ).mount();
+        } );
+     </script>
+     
+  </body>
+
+</html>
