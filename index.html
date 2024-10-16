@@ -19,23 +19,30 @@
         .content-div {
             display: none; 
         }
+             /* Default background image for screens 768px and above */
+        header {
+            background-image: url('img/beach.png');
+        }
+
+        /* Background image for screens smaller than 768px */
+        @media (max-width: 1024px) {
+            header {
+            background-image: url('img/train1.jpeg');
+            }
+        }
 
     </style>
 </head>
 
 
 <body class="">
-    <div class="splash-screen bg-[url('img/beachsplash.jpg')] bg-cover bg-center w-full">
+    <!-- <div class="splash-screen bg-[url('img/beachsplash.jpg')] bg-cover bg-center w-full">
         <img src="img/nobglogo-white.png" alt="Logo" class="w-64 justify-center items-center ">
-    </div>
-    <!-- <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v18.0"
-        nonce="pJ7Mpb3y"></script> -->
-    
-    <header class="relative bg-cover bg-center min-h-screen" style="background-image: url('img/trainbanner.jpg');">
-        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-        <div class="relative z-10 flex flex-col h-full justify-between px-6 text-white">
-            <nav class=" lg:bg-transparent top-0 z-50 py-3 lg:py-0" style="font-family:'Anton', sans-serif;">
+    </div> -->
+    <header class="relative bg-cover bg-center min-h-screen" >
+        <div class="absolute inset-0 bg-black bg-opacity-0"></div>
+        <div class="relative z-10 flex flex-col h-full justify-between  text-white">
+            <nav class="lg:border-b-0  border-b border-yellow-400 bg-gradient-to-b from-yellow-500 lg:from-transparent top-0 z-50 pt-3 pb-1.5 lg:py-0" style="font-family:'Anton', sans-serif;">
                 <div class="container mx-auto flex justify-between items-center">
                     <div class="text-black justify-center mx-2 items-center ">
                         <a href="index.html">
@@ -51,7 +58,7 @@
         
                     </div>
                     <div class="md:hidden px-3">
-                        <button id="nav-toggle" class="text-white focus:outline-none">
+                        <button id="nav-toggle" class="text-yellow-400 focus:outline-none">
                             <svg class="w-6 h-6" fill="" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -201,28 +208,28 @@
             <div class="grid grid-cols-1 gap-8 mt-16 sm:grid-cols-2 lg:grid-cols-4 lg:px-14">
                 <!-- Airport pickup -->
                 <div class="flex flex-col items-center text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 bg-yellow-400 rounded-full p-3" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M381 114.9L186.1 41.8c-16.7-6.2-35.2-5.3-51.1 2.7L89.1 67.4C78 73 77.2 88.5 87.6 95.2l146.9 94.5L136 240 77.8 214.1c-8.7-3.9-18.8-3.7-27.3 .6L18.3 230.8c-9.3 4.7-11.8 16.8-5 24.7l73.1 85.3c6.1 7.1 15 11.2 24.3 11.2l137.7 0c5 0 9.9-1.2 14.3-3.4L535.6 212.2c46.5-23.3 82.5-63.3 100.8-112C645.9 75 627.2 48 600.2 48l-57.4 0c-20.2 0-40.2 4.8-58.2 14L381 114.9zM0 480c0 17.7 14.3 32 32 32l576 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 448c-17.7 0-32 14.3-32 32z"/></svg>                    
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 bg-yellow-400 rounded-2xl p-3" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M381 114.9L186.1 41.8c-16.7-6.2-35.2-5.3-51.1 2.7L89.1 67.4C78 73 77.2 88.5 87.6 95.2l146.9 94.5L136 240 77.8 214.1c-8.7-3.9-18.8-3.7-27.3 .6L18.3 230.8c-9.3 4.7-11.8 16.8-5 24.7l73.1 85.3c6.1 7.1 15 11.2 24.3 11.2l137.7 0c5 0 9.9-1.2 14.3-3.4L535.6 212.2c46.5-23.3 82.5-63.3 100.8-112C645.9 75 627.2 48 600.2 48l-57.4 0c-20.2 0-40.2 4.8-58.2 14L381 114.9zM0 480c0 17.7 14.3 32 32 32l576 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 448c-17.7 0-32 14.3-32 32z"/></svg>                    
                     <h3 class="mt-4 text-lg font-semibold text-gray-900">Airport pickup</h3>
                     <p class="mt-2 text-gray-600 text-xs font-light">We provide escort from the airport to the hotel!</p>
                 </div>
 
                 <!-- Easy booking -->
                 <div class="flex flex-col items-center text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 bg-yellow-400 rounded-full p-3" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M135.2 117.4L109.1 192l293.8 0-26.1-74.6C372.3 104.6 360.2 96 346.6 96L165.4 96c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32l181.2 0c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2l0 144 0 48c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-48L96 400l0 48c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-48L0 256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 bg-yellow-400 rounded-2xl p-3" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M135.2 117.4L109.1 192l293.8 0-26.1-74.6C372.3 104.6 360.2 96 346.6 96L165.4 96c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32l181.2 0c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2l0 144 0 48c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-48L96 400l0 48c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-48L0 256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
                     <h3 class="mt-4 text-lg font-semibold text-gray-900">Custom-Made Tours</h3>
                     <p class="mt-2 text-gray-600 text-xs font-light">Tailor-made tours across Sri Lanka for every preference.</p>
                 </div>
 
                 <!-- Best tour guide -->
                 <div class="flex flex-col items-center text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 bg-yellow-400 rounded-full p-3" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M384 476.1L192 421.2l0-385.3L384 90.8l0 385.3zm32-1.2l0-386.5L543.1 37.5c15.8-6.3 32.9 5.3 32.9 22.3l0 334.8c0 9.8-6 18.6-15.1 22.3L416 474.8zM15.1 95.1L160 37.2l0 386.5L32.9 474.5C17.1 480.8 0 469.2 0 452.2L0 117.4c0-9.8 6-18.6 15.1-22.3z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 bg-yellow-400 rounded-2xl p-3" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M384 476.1L192 421.2l0-385.3L384 90.8l0 385.3zm32-1.2l0-386.5L543.1 37.5c15.8-6.3 32.9 5.3 32.9 22.3l0 334.8c0 9.8-6 18.6-15.1 22.3L416 474.8zM15.1 95.1L160 37.2l0 386.5L32.9 474.5C17.1 480.8 0 469.2 0 452.2L0 117.4c0-9.8 6-18.6 15.1-22.3z"/></svg>
                     <h3 class="mt-4 text-lg font-semibold text-gray-900">Accommodation & Transport</h3>
                     <p class="mt-2 text-gray-600 text-xs font-light">Lodging and transport tailored to your needs</p>
                 </div>
 
                 <!-- Lots of promos -->
                 <div class="flex flex-col items-center text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 bg-yellow-400 rounded-full p-3" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M346.3 271.8l-60.1-21.9L214 448 32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l512 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-261.9 0 64.1-176.2zm121.1-.2l-3.3 9.1 67.7 24.6c18.1 6.6 38-4.2 39.6-23.4c6.5-78.5-23.9-155.5-80.8-208.5c2 8 3.2 16.3 3.4 24.8l.2 6c1.8 57-7.3 113.8-26.8 167.4zM462 99.1c-1.1-34.4-22.5-64.8-54.4-77.4c-.9-.4-1.9-.7-2.8-1.1c-33-11.7-69.8-2.4-93.1 23.8l-4 4.5C272.4 88.3 245 134.2 226.8 184l-3.3 9.1L434 269.7l3.3-9.1c18.1-49.8 26.6-102.5 24.9-155.5l-.2-6zM107.2 112.9c-11.1 15.7-2.8 36.8 15.3 43.4l71 25.8 3.3-9.1c19.5-53.6 49.1-103 87.1-145.5l4-4.5c6.2-6.9 13.1-13 20.5-18.2c-79.6 2.5-154.7 42.2-201.2 108z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 bg-yellow-400 rounded-2xl p-3" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M346.3 271.8l-60.1-21.9L214 448 32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l512 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-261.9 0 64.1-176.2zm121.1-.2l-3.3 9.1 67.7 24.6c18.1 6.6 38-4.2 39.6-23.4c6.5-78.5-23.9-155.5-80.8-208.5c2 8 3.2 16.3 3.4 24.8l.2 6c1.8 57-7.3 113.8-26.8 167.4zM462 99.1c-1.1-34.4-22.5-64.8-54.4-77.4c-.9-.4-1.9-.7-2.8-1.1c-33-11.7-69.8-2.4-93.1 23.8l-4 4.5C272.4 88.3 245 134.2 226.8 184l-3.3 9.1L434 269.7l3.3-9.1c18.1-49.8 26.6-102.5 24.9-155.5l-.2-6zM107.2 112.9c-11.1 15.7-2.8 36.8 15.3 43.4l71 25.8 3.3-9.1c19.5-53.6 49.1-103 87.1-145.5l4-4.5c6.2-6.9 13.1-13 20.5-18.2c-79.6 2.5-154.7 42.2-201.2 108z"/></svg>
                     <h3 class="mt-4 text-lg font-semibold text-gray-900">Local Experiences</h3>
                     <p class="mt-2 text-gray-600 text-xs font-light">Experience authentic Sri Lankan culture.</p>
                 </div>
