@@ -24,12 +24,25 @@
             background-image: url('img/beach.png');
         }
 
-        /* Background image for screens smaller than 768px */
+/* Background image for screens smaller than 1024px */
         @media (max-width: 1024px) {
             header {
-            background-image: url('img/train1.jpeg');
+                background-image: url('img/train1.jpeg');
+                background-size: cover;
+                animation: changeBackground 3s infinite ;
             }
         }
+
+        /* Keyframes for swapping between images */
+        @keyframes changeBackground {
+            50% {
+                background-image: url('img/beach.png');
+                opacity: 1;
+            }
+            100% {
+                background-image: url('img/train1.jpeg');
+            }
+}
 
     </style>
 </head>
@@ -114,50 +127,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="lg:hidden p-4 justify-start items-start ">
-                    <div id="card-carousel" class="splide" aria-label="Tour Cards Carousel">
-                        <div class="splide__track">
-                           <ul class="splide__list">
-                              <li class="splide__slide">
-                                 <div class="relative bg-white shadow-2xl rounded-2xl overflow-hidden h-96">
-                                    <img src="img/card1.png" class="absolute inset-0 object-cover m-auto">
-                                    <div class="absolute inset-0"></div>
-                                    <div class="absolute top-0 p-4 bg-gradient-to-b pb-10 bg-opacity-5 from-black/50 w-full bg-opacity-50">
-                                       <h3 class="text-lg text-white font-bold">Explore the Island</h3>
-                                    </div>
-                                    <div class="absolute bottom-0 right-0 p-4 bg-gradient-to-t from-black">
-                                       <p class="text-xs font-light text-gray-300">Experience Sri Lanka's rich history and stunning landscapes on this comprehensive tour...</p>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="splide__slide">
-                                 <div class="relative bg-white shadow-2xl rounded-2xl overflow-hidden h-96">
-                                    <img src="img/card2.png" class="absolute inset-0 object-cover m-auto">
-                                    <div class="absolute inset-0"></div>
-                                    <div class="absolute top-0 p-4 bg-gradient-to-b pb-10 bg-opacity-5 from-black/50 w-full bg-opacity-50">
-                                       <h3 class="text-lg text-white font-bold">The Golden Triangle</h3>
-                                    </div>
-                                    <div class="absolute bottom-0 right-0 p-4 bg-gradient-to-t from-black">
-                                       <p class="text-xs font-light text-gray-300">Delve into the heart of Sri Lanka's cultural heritage with this tour of the Golden Triangle...</p>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="splide__slide">
-                                 <div class="relative bg-white shadow-2xl rounded-2xl overflow-hidden h-96">
-                                    <img src="img/card3.png" class="absolute inset-0 object-cover m-auto">
-                                    <div class="absolute inset-0"></div>
-                                    <div class="absolute top-0 p-4 bg-gradient-to-b pb-10 bg-opacity-5 from-black/50 w-full bg-opacity-50">
-                                       <h3 class="text-lg text-white font-bold">Relax on the Beach</h3>
-                                    </div>
-                                    <div class="absolute bottom-0 right-0 p-4 bg-gradient-to-t from-black">
-                                       <p class="text-xs font-light text-gray-300">Unwind on the pristine beaches of Sri Lanka with our "Relax on the Beach" package...</p>
-                                    </div>
-                                 </div>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                </div>
+                
             </div>
         </div>
     </header>
